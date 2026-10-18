@@ -4,15 +4,17 @@
  classes = {};
  objectVersion = 56;
  objects = {
+ A00000000000000000000020 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components/DesignSystem.swift; sourceTree = "<group>"; };
+ A00000000000000000000021 = {isa = PBXBuildFile; fileRef = A00000000000000000000020; };
  A00000000000000000000001 = {isa = PBXBuildFile; fileRef = A00000000000000000000003; };
  A00000000000000000000002 = {isa = PBXBuildFile; fileRef = A00000000000000000000004; };
  A00000000000000000000003 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/AirQiblaApp.swift; sourceTree = "<group>"; };
  A00000000000000000000004 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/ContentView.swift; sourceTree = "<group>"; };
  A00000000000000000000005 = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQibla.app; sourceTree = BUILT_PRODUCTS_DIR; };
  A00000000000000000000006 = {isa = PBXGroup; children = (A00000000000000000000007, A00000000000000000000008); sourceTree = "<group>"; };
- A00000000000000000000007 = {isa = PBXGroup; children = (A00000000000000000000003, A00000000000000000000004); path = AirQibla; sourceTree = "<group>"; };
+ A00000000000000000000007 = {isa = PBXGroup; children = (A00000000000000000000003, A00000000000000000000004, A00000000000000000000020); path = AirQibla; sourceTree = "<group>"; };
  A00000000000000000000008 = {isa = PBXGroup; children = (A00000000000000000000005); name = Products; sourceTree = "<group>"; };
- A00000000000000000000009 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000001, A00000000000000000000002); runOnlyForDeploymentPostprocessing = 0; };
+ A00000000000000000000009 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000001, A00000000000000000000002, A00000000000000000000021); runOnlyForDeploymentPostprocessing = 0; };
  A0000000000000000000000A = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
  A0000000000000000000000B = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
  A0000000000000000000000C = {isa = PBXNativeTarget; buildConfigurationList = A0000000000000000000000F; buildPhases = (A00000000000000000000009, A0000000000000000000000A, A0000000000000000000000B); buildRules = (); dependencies = (); name = AirQibla; productName = AirQibla; productReference = A00000000000000000000005; productType = "com.apple.product-type.application"; };

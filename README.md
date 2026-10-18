@@ -4,16 +4,16 @@
 
 Native iPhone app for offline Qibla direction and prayer times. Repository: `rahlouni/addan`.
 
-## Phase 1
+## Phase 2
 
-Minimal SwiftUI app targeting iOS 17+. No external dependencies, network calls, accounts, or sensor permissions yet. The welcome screen contains no simulated GPS or prayer readings.
+SwiftUI dashboard targeting iOS 17+, with emerald, teal, and gold styling, a vector Kaaba compass illustration, and four navigable tabs. A persistent Design Preview banner identifies sample readings. GPS, heading, alignment, and prayer calculations are not connected. More includes a working device-clock UTC toggle. No external dependencies, network calls, accounts, or sensor permissions yet.
 
 ## Run
 
 1. Install full Xcode from the Mac App Store, launch it, and finish its component installation (including an iOS Simulator runtime).
 2. Open `AirQibla.xcodeproj` in Xcode.
 3. Choose the `AirQibla` scheme and an installed iPhone simulator, then press Command-R.
-4. Confirm the screen shows “Air Qibla” and “Faith Travels With You”. Rotate the simulator and try larger accessibility text to check layout.
+4. Confirm the dashboard shows “Air Qibla” and the Design Preview banner. Tap all four tabs. In More, toggle device time to UTC. Rotate the simulator and try larger accessibility text to check layout.
 
 For a physical iPhone, choose your development team in the target’s Signing & Capabilities settings and replace the placeholder bundle identifier `com.rahlouni.AirQibla` if needed. Connect and select your iPhone as the run destination.
 
@@ -31,4 +31,4 @@ xcodebuild -project AirQibla.xcodeproj -scheme AirQibla -sdk iphonesimulator -co
 - `AirQibla/Views`: SwiftUI presentation.
 - `Docs/DevelopmentPlan.md`: phase boundaries and product constraints.
 
-Additional modules and unit tests will be introduced with the features they support. App icons, sensor services, prayer calculations, and the visual dashboard are not part of Phase 1.
+Additional modules and unit tests will be introduced with the features they support. App icons, sensor services, and prayer calculations remain for later phases.
