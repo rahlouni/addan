@@ -1,0 +1,41 @@
+name: Air Qibla iOS Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ios-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build for iOS Simulator
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      # No test target exists yet. Add tests when the calculation services land.
+      - name: Build Air Qibla
+        run: |
+          xcodebuild build \
+            -project AirQibla.xcodeproj \
+            -scheme AirQibla \
+            -configuration Debug \
+            -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath "$RUNNER_TEMP/AirQiblaDerivedData" \
+            CODE_SIGNING_ALLOWED=NO
